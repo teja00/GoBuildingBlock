@@ -25,4 +25,14 @@ func main() {
 	// If no error was returned, print the returned message
 	// to the console.
 	fmt.Println(message)
+
+	names := []string{"Teja", "Ganga", "Ajet"}
+
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, message := range messages {
+		fmt.Println(message)
+	}
 }
